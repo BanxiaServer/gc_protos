@@ -1,0 +1,329 @@
+4.5
+    00:58:05 <INFO:GameSession> RECV: OFPGPANPMKH (919)
+    > 6204fb8a8010
+    00:58:06 <INFO:GameSession> RECV: EvtCreateGadgetNotify (1702)
+    > 080210ba8880a40320a11f30fb8a80103a0f0d99342a451505a945431d7b4bd1c4489cd2891450fb8a8010580762051553784c4368fa8a8008da4a1f0a1d48696c695f5765695f4e6f576561706f6e5f5468726f7741747461636ba8559108b07101
+    00:58:06 <INFO:GameSession> RECV: ClientAbilityInitFinishNotify (29194)
+    > 38ba8880a4036a14080220013202780150ba8880a4036a0410012801
+    00:58:06 <INFO:GameSession> RECV: OFPGPANPMKH (919)
+    > 6204fb8a8010
+    00:58:06 <INFO:GameSession> RECV: EvtCreateGadgetNotify (1702)
+    > 080210bb8880a40320a11f30fb8a80103a0f0da4352a45157ca645431d9a4cd1c4489cd2891450fb8a80105807620515bca15f4368fa8a8008da4a1f0a1d48696c695f5765695f4e6f576561706f6e5f5468726f7741747461636ba8559108b07101
+    00:58:06 <INFO:GameSession> RECV: ClientAbilityInitFinishNotify (29194)
+    > 38bb8880a4036a14080220013202780150bb8880a4036a0410012801
+    00:58:06 <INFO:GameSession> SEND: PlayerPropNotify (28854)
+    > 2210089b4e120b089b4e10c0bb0120c0bb01
+    00:58:06 <INFO:GameSession> SEND: PlayerPropChangeNotify (5425)
+    > 589b4e
+    00:58:07 <INFO:GameSession> RECV: EvtDoSkillSuccNotify (3164)
+    > 20fa8a80083007520a0d18ea783e1d5252783f70d250
+    00:58:07 <INFO:GameSession> SEND: PlayerPropNotify (28854)
+    > 2210089b4e120b089b4e10c0bb0120c0bb01
+    00:58:07 <INFO:GameSession> SEND: PlayerPropChangeNotify (5425)
+    > 589b4e
+    00:58:07 <INFO:GameSession> SEND: CombatInvocationsNotify (28055)
+    > 42a20108011801329b0148015a92010a0f0d0cca4d3f15a4d63e3e1ddc9a103f10fb8a8010180120e88e012a290a0f0dd0292a451560e343431da760d1c41a0a0d5774513f1d9630133f30015d5c81bd417d5c81bd41353032b84358fa8a8008620a409110500478fa8a80086a0e0d0ad7233c159a99193e380148017001d02d02fd313032b843c03a842bf53c0000803fc03e998dfae70ef03f01dd640000484278ff8601
+    00:58:07 <INFO:GameSession> SEND: EntityFightPropUpdateNotify (2497)
+    > 20fb8a80107a0808f20715ffff7f7f
+    00:58:07 <INFO:GameSession> RECV: OFPGPANPMKH (919)
+    > 6204fb8a8010
+    00:58:08 <INFO:GameSession> RECV: EvtCreateGadgetNotify (1702)
+    > 080210bc8880a40320a11f30fb8a80103a0f0d75382a451514a745431d3556d1c4489cd2891450fb8a80105807620515082f714368fa8a8008da4a1f0a1d48696c695f5765695f4e6f576561706f6e5f5468726f7741747461636ba8559108b07101
+    00:58:08 <INFO:GameSession> RECV: ClientAbilityInitFinishNotify (29194)
+    > 38bc8880a4036a14080220013202780150bc8880a4036a0410012801
+    00:58:08 <INFO:GameSession> RECV: EvtDestroyGadgetNotify (3809)
+    > 38ba8880a4034807
+    00:58:08 <INFO:GameSession> SEND: CombatInvocationsNotify (28055)
+    > 42a20108011801329b0148015a92010a0f0d051311bf154d3e43bf1d359e9fbe10fa8a800820e88e012a2e0a0f0d5e192a4515aa6544431dc976d1c41a0f0df81b2dbf15ddc922bf1da476bebe30015d6ffac8407d158cf04135ba469e4158bc8880a403620b409104500178bc8880a4036a090d0ad7233c380148017001d02d02fd31ba469e41c03ab607f53c0000803fc03e9395fae70ef03f01dd640000a04178ba8701
+
+4.0 班尼特 e技能共打出三个球
+顺序是 SceneEntityAppearNotify x3 >
+GadgetInteractReq + AvatarFightPropUpdateNotify + EntityFightPropChangeReasonNotify >
+GadgetInteractReq + AvatarFightPropUpdateNotify + EntityFightPropChangeReasonNotify >
+GadgetInteractReq + AvatarFightPropUpdateNotify + EntityFightPropChangeReasonNotify 
+
+在4.5服务器上 SceneEntityAppearNotify 并不会出现 后面的东西也都没有出现
+
+SceneEntityAppearNotify 出现三次
+GadgetInteractReq 出现三次
+AvatarFightPropUpdateNotify 和 EntityFightPropChangeReasonNotify 一共发六次包的原因可能是因为同为火属性 在官服获得的能量会比1大
+
+日志:
+    2024-04-18T01:26:55Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneEntityAppearNotify (24016)
+    2024-04-18T01:26:55Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneEntityAppearNotify (24016)
+    2024-04-18T01:26:55Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneEntityAppearNotify (24016)
+    2024-04-18T01:26:55Z <INFO:emu.grasscutter.server.game.GameSession> RECV: EvtAiSyncCombatThreatInfoNotify (7714)
+    2024-04-18T01:26:55Z <INFO:emu.grasscutter.server.game.GameSession> RECV: EntityAiSyncNotify (5447)
+    2024-04-18T01:26:55Z <INFO:emu.grasscutter.server.game.GameSession> SEND: EntityAiSyncNotify (5447)
+    2024-04-18T01:26:56Z <INFO:emu.grasscutter.server.game.GameSession> RECV: GadgetInteractReq (9254)
+    2024-04-18T01:26:56Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneEntityDisappearNotify (1787)
+    2024-04-18T01:26:56Z <INFO:emu.grasscutter.server.game.GameSession> SEND: AvatarFightPropUpdateNotify (21000)
+    2024-04-18T01:26:56Z <INFO:emu.grasscutter.server.game.GameSession> SEND: EntityFightPropChangeReasonNotify (2489)
+    2024-04-18T01:26:56Z <INFO:emu.grasscutter.server.game.GameSession> SEND: AvatarFightPropUpdateNotify (21000)
+    2024-04-18T01:26:56Z <INFO:emu.grasscutter.server.game.GameSession> SEND: EntityFightPropChangeReasonNotify (2489)
+    2024-04-18T01:26:56Z <INFO:emu.grasscutter.server.game.GameSession> RECV: GadgetInteractReq (9254)
+    2024-04-18T01:26:56Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneEntityDisappearNotify (1787)
+    2024-04-18T01:26:56Z <INFO:emu.grasscutter.server.game.GameSession> SEND: AvatarFightPropUpdateNotify (21000)
+    2024-04-18T01:26:56Z <INFO:emu.grasscutter.server.game.GameSession> SEND: EntityFightPropChangeReasonNotify (2489)
+    2024-04-18T01:26:56Z <INFO:emu.grasscutter.server.game.GameSession> SEND: AvatarFightPropUpdateNotify (21000)
+    2024-04-18T01:26:56Z <INFO:emu.grasscutter.server.game.GameSession> SEND: EntityFightPropChangeReasonNotify (2489)
+    2024-04-18T01:26:56Z <INFO:emu.grasscutter.server.game.GameSession> RECV: GadgetInteractReq (9254)
+    2024-04-18T01:26:56Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneEntityDisappearNotify (1787)
+    2024-04-18T01:26:56Z <INFO:emu.grasscutter.server.game.GameSession> SEND: AvatarFightPropUpdateNotify (21000)
+    2024-04-18T01:26:56Z <INFO:emu.grasscutter.server.game.GameSession> SEND: EntityFightPropChangeReasonNotify (2489)
+    2024-04-18T01:26:56Z <INFO:emu.grasscutter.server.game.GameSession> SEND: AvatarFightPropUpdateNotify (21000)
+    2024-04-18T01:26:56Z <INFO:emu.grasscutter.server.game.GameSession> SEND: EntityFightPropChangeReasonNotify (2489)
+    2024-04-18T01:26:56Z <INFO:emu.grasscutter.server.game.GameSession> RECV: EvtAiSyncCombatThreatInfoNotify (7714)
+
+4.5放大招
+05:11:16 <INFO:GameSession> RECV: EvtDoSkillSuccNotify (3164)
+> 20838080083007520a0d5920933e1df23375bf70d44e
+05:11:16 <INFO:GameSession> RECV: EvtCreateGadgetNotify (1702)
+> 080210bf8880a40320e907280130838080083a0f0d94802c4515d27644431d8336ddc448c9dfc61350838080085807620515de4c2343da4a1b0a194176617461725f506c617965725f57696e6442726561746865a8559108b07101
+05:11:16 <INFO:GameSession> RECV: ClientAbilityInitFinishNotify (29194)
+> 38bf8880a4036a7b08022006326b2a170a100a0e546f726e61646f5f44616d6167651d17d94e3f2a250a1e0a1c57696e64427265617468655f547769737465645f4475726174696f6e1d000020412a290a220a2057696e64427265617468655f547769737465645f5375624875727444656c74611dcdcc4cbe50bf8880a4036a0210016a1e08022001320a18013881808080a0e20950bf8880a4036a061001280148016a1e08022001320a18033881808080a0e20950bf8880a4036a061001280248036a1e08022001320a18063881808080a0e20950bf8880a4036a061001280348066a1e08022001320a18053881808080a0e20950bf8880a4036a061001280448056a1e08022001320a18043881808080a0e20950bf8880a4036a061001280548046a2f08022006321f2a1d0a160a14546f726e61646f5f4d697865645f44616d6167651db6f37d3e50bf8880a4036a0210036a2a08022007321c0a1a0a185f4142494c4954595f546f726e61646f5f49734d6978656450bf8880a4036a006a2f0802200732210a1a0a185f4142494c4954595f546f726e61646f5f49734d697865641d0000803f50bf8880a4036a006a1e08022001320a180e3881808080a0e20950bf8880a4036a0610032806480e6a1e08022001320a18013881808080a0e20950bf8880a4036a06100328074801
+05:11:17 <INFO:GameSession> SEND: CombatInvocationsNotify (28055)
+> 42800108011801327a48015a720a0a0d5820933e1df23375bf10838080081809208080012a240a0f0d6d7f2c45152fd242431dd92eddc41a0a0d5920933e1df23375bf30015d0000344358bf8880a4036214280a40939402500360bf8880a40378bf8880a4036a00d02d05c03a9d36f53c0000803fc03ec69b99ef0ef03f0178fad901
+05:11:22 <INFO:GameSession> SEND: SceneTimeNotify (21173)
+> 100350f59917
+05:11:23 <INFO:GameSession> RECV: EvtDestroyGadgetNotify (3809)
+> 38bf8880a4034807
+
+
+4.0放大招
+2024-04-18T05:25:49Z <INFO:emu.grasscutter.server.game.GameSession> RECV: EvtDoSkillSuccNotify (8216)
+2024-04-18T05:25:49Z <INFO:emu.grasscutter.server.game.GameSession> RECV: EvtCreateGadgetNotify (22195)
+2024-04-18T05:25:49Z <INFO:emu.grasscutter.server.game.GameSession> SEND: EntityFightPropUpdateNotify (24036)
+2024-04-18T05:25:49Z <INFO:emu.grasscutter.server.game.GameSession> SEND: EntityFightPropChangeReasonNotify (2489)
+2024-04-18T05:25:49Z <INFO:emu.grasscutter.server.game.GameSession> RECV: ClientAbilityInitFinishNotify (8666)
+2024-04-18T05:25:50Z <INFO:emu.grasscutter.server.game.GameSession> RECV: EntityConfigHashNotify (20100)
+2024-04-18T05:25:50Z <INFO:emu.grasscutter.server.game.GameServerPacketHandler> Unhandled packet (20100): EntityConfigHashNotify
+2024-04-18T05:25:51Z <INFO:emu.grasscutter.server.game.GameSession> SEND: CombatInvocationsNotify (20271)
+2024-04-18T05:25:51Z <INFO:emu.grasscutter.server.game.GameSession> SEND: EntityFightPropUpdateNotify (24036)
+2024-04-18T05:25:52Z <INFO:emu.grasscutter.server.game.GameSession> RECV: GetWorldMpInfoReq (6964)
+2024-04-18T05:25:52Z <INFO:emu.grasscutter.server.game.GameSession> SEND: GetWorldMpInfoRsp (1461)
+2024-04-18T05:25:52Z <INFO:emu.grasscutter.server.game.GameSession> RECV: GetOnlinePlayerListReq (27587)
+2024-04-18T05:25:52Z <INFO:emu.grasscutter.server.game.GameSession> SEND: GetOnlinePlayerListRsp (1234)
+2024-04-18T05:25:52Z <INFO:emu.grasscutter.server.game.GameSession> RECV: PlayerSetPauseReq (4448)
+2024-04-18T05:25:52Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneTimeNotify (21694)
+2024-04-18T05:25:52Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneTimeNotify (21694)
+2024-04-18T05:25:52Z <INFO:emu.grasscutter.server.game.GameSession> SEND: PlayerSetPauseRsp (1771)
+2024-04-18T05:25:52Z <INFO:emu.grasscutter.server.game.GameSession> RECV: PlayerSetPauseReq (4448)
+2024-04-18T05:25:52Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneTimeNotify (21694)
+2024-04-18T05:25:52Z <INFO:emu.grasscutter.server.game.GameSession> SEND: PlayerSetPauseRsp (1771)
+2024-04-18T05:25:53Z <INFO:emu.grasscutter.server.game.GameSession> RECV: SetEntityClientDataNotify (1139)
+
+
+如&quot;author:&quot;, &quot;committer:&quot;, &quot;after:&quot;, 或&quot;before:&quot;,
+
+夜兰 q 4.5 元素不会被清除时
+20838080083007520a0d619bfebe1d6a1a5e3f70f252
+20838080083007520a0d 3372123f1da6f951 bf70f252
+流浪者
+20878080083007520a0d d76106bf1da6e459 3f708354
+
+夜兰 q 4.5 元素被清除时
+20838080083007520a0d3130c93e1d6a686bbf70f252
+20838080083007520a0d 3130c93e1d6a686b bf70f252
+
+20838080083007520a0d 0af5d63e1d6c5868b f70f252
+
+// CmdId: 25045 可能是4.5的AntiAddictNotify
+message KNBMGPJNHHO {
+	string GBAOBCKGDFC = 8;
+	string AKFMJGPNFJL = 5;
+	int32 NJALNKFDEHO = 3;
+}
+
+//AnnounceData
+message GPHJBAFLKOG {
+	string IDNPONMMOFM = 5;
+	string HCKJNAGLKMF = 3;
+	string PENIJOMJOMI = 15;
+	uint32 LFBFFAGOEDG = 12;
+	uint32 MJOJMMFAFHC = 9;
+	uint32 IHNPEIOCOCF = 13;
+	uint32 CJIFPEJOHOP = 2;
+	bool BCHKJCLIKPI = 6;
+	uint32 GAGGCPNBNHI = 1;
+}
+
+// CmdId: 8152 ServerAnnounceNotify
+message DIIBEIOCLCG {
+	repeated GPHJBAFLKOG NEJONMLHGAB = 2;
+}
+
+// 以下内容都可能是 ServerAnnounceRevokeNotify
+// CmdId: 7821 
+message CIJDHKLICHD {
+	repeated uint32 OFJKHEPEHDH = 15;
+}
+// CmdId: 23268
+message OKFBGMONKJE {
+	repeated uint32 MFILIMEGPAO = 5;
+}
+// CmdId: 24777
+message BGDAFDKLNNM {
+	repeated uint32 BOENHLKKFDA = 1;
+}
+// CmdId: 23448
+message LCNILNHGMLN {
+	repeated uint32 DPFOMLOEKOB = 2;
+}
+// CmdId: 7886
+message BAPCBNJJPCG {
+	repeated uint32 OIJDGIIBFOD = 1;
+}
+// CmdId: 23183
+message KFEFJCDENOA {
+	repeated uint32 OCFBKOBHPEN = 6;
+}
+message JEFDJBNJHFN {
+	repeated uint32 CEMJHCPAEEP = 1;
+}
+// CmdId: 9026
+message ICFCMDMPANJ {
+	repeated uint32 BFOPNAIMEGJ = 13;
+}
+// CmdId: 6658
+message CMDMABCGHFC {
+	repeated uint32 POKELMFMPBH = 9;
+}
+// CmdId: 9357
+message IPPLPEDJDAD {
+	repeated uint32 PLMOEBKLGCC = 10;
+}
+// CmdId: 28324
+message JLPBLCGPLEN {
+	repeated uint32 EDHPFELHCJH = 14;
+}
+// CmdId: 22895
+message FLEOHKGDNEI {
+	repeated uint32 NKLMJIGMOLB = 7;
+}
+// CmdId: 1971
+message FABIHIBJPBL {
+	repeated uint32 MOEELENFKJC = 10;
+}
+// CmdId: 2968
+message EPMDDOENEGJ {
+	repeated uint32 HCOAHAMHOOC = 15;
+}
+// CmdId: 29012
+message LLAFCEFEEHO {
+	repeated uint32 CLFCMEENHJM = 14;
+}
+// CmdId: 7058
+message IAGDNMLIABE {
+	repeated uint32 FEOIDJLFNOM = 2;
+}
+// CmdId: 9587
+message JEGGHEPINED {
+	repeated uint32 PGHFCGKFAFP = 8;
+}
+// CmdId: 20545
+message PBFMKALNKGA {
+	repeated uint32 BGCIJLEJDFI = 10;
+}
+// CmdId: 24489
+message BDOHFHLPPKP {
+	repeated uint32 NJIFKBCCOGC = 7;
+}
+// CmdId: 25153
+message MONNCGJPBMN {
+	repeated uint32 PHJPNLCFIEA = 9;
+}
+// CmdId: 2459
+message DODFIFCHKPL {
+	repeated uint32 DPFOMLOEKOB = 1;
+}
+// CmdId: 24005
+message ONMHLAMEAHB {
+	repeated uint32 KAADGJIJFDB = 3;
+}
+message MECBLNBLBBO {
+	repeated uint32 CAGHOMPCAIN = 7;
+}
+// CmdId: 7056
+message CLBHJNICOEK {
+	repeated uint32 BNBLLNJAPKH = 6;
+}
+// CmdId: 25994
+message FHBDMECMCMG {
+	repeated uint32 POKELMFMPBH = 7;
+}
+// CmdId: 4523
+message HNAFKGKFGIB {
+	repeated uint32 MBDFJKCEOJI = 2;
+}
+// CmdId: 29660
+message FLMMPOONPHK {
+	repeated uint32 NFJHODFGFPK = 8;
+}
+// CmdId: 29705
+message IBDJIEFKINA {
+	repeated uint32 NIKFLCPEFME = 10;
+}
+// CmdId: 2454
+message MFGLFANHKEB {
+	repeated uint32 ADIPJNDFJFJ = 2;
+}
+// CmdId: 26978
+message DOEOELLOHIM {
+	repeated uint32 CBCADJKFHIC = 7;
+}
+// CmdId: 27801
+message NFNBKKELIBO {
+	repeated uint32 EBACIDHMMAM = 13;
+}
+// CmdId: 4330
+message BNFDOOKLHBN {
+	repeated uint32 BGLOHPIJJAB = 13;
+}
+// CmdId: 24231
+message MGCFFOJMJPL {
+	repeated uint32 BLBDBGKPLJI = 6;
+}
+// CmdId: 28289
+message PLCNKOCHACF {
+	repeated uint32 JPFIFHJPGMP = 7;
+}
+// CmdId: 906
+message HBEFCFAPFHH {
+	repeated uint32 GHOFNAHMJLI = 9;
+}
+message GIODLLLCOBI {
+	repeated uint32 OADPCBBONAC = 1;
+}
+// CmdId: 2716
+message HOIKPKPKOEB {
+	repeated uint32 FAGBODBANIK = 2;
+}
+// CmdId: 195
+message AAKNOABHPBL {
+	repeated uint32 KDNMECLMECK = 6;
+}
+// CmdId: 2000
+message LGBJAELACLA {
+	repeated uint32 NDIGDMDCGGF = 6;
+}
+// CmdId: 2853
+message CKJNMGMKPMF {
+	repeated uint32 DBHCHBJDLOC = 15;
+}
+// CmdId: 5163
+message GJDBJJODMLE {
+	repeated uint32 OCFBKOBHPEN = 9;
+}
+// CmdId: 6888
+message KGNOLECJCND {
+	repeated uint32 ICMNOIAIKAG = 8;
+}
+// CmdId: 22317
+message MAFEDMFJALG {
+	repeated uint32 LPNFFMAGMBM = 13;
+}
+// CmdId: 1538
+message EKNPOCHIECE {
+	repeated uint32 JFEHPLMDMEH = 3;
+}

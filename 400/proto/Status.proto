@@ -1,0 +1,13 @@
+// Proto has been converted from Sorapointa to Grasscutter format
+// Proto has been converted from Sorapointa to Grasscutter format
+// Proto has been converted from Sorapointa to Grasscutter format
+syntax = "proto3";
+
+option java_package = "emu.grasscutter.net.proto";
+
+enum Status {
+    STATUS_INVALID = 0;
+    STATUS_UNFINISHED = 1;
+    STATUS_FINISHED = 2;
+    STATUS_REWARD_TAKEN = 3;
+}

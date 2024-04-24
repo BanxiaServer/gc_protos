@@ -1,0 +1,9 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+// CmdId: 25744
+//obf: BHCJIPOGIAK
+message SkipPlayerGameTimeRsp {
+    int32 PLCEBDLFFED = 5;
+    uint32 EMDKGEILOCM = 12;
+    uint32 HHNLBMDEDJN = 4;
+}

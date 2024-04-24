@@ -1,0 +1,149 @@
+4.0
+    2024-04-20T17:48:06Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneTimeNotify (21694)
+    2024-04-20T17:48:12Z <INFO:emu.grasscutter.server.game.GameSession> RECV: PlayerSetPauseReq (4448)
+    2024-04-20T17:48:12Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneTimeNotify (21694)
+    2024-04-20T17:48:12Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneTimeNotify (21694)
+    2024-04-20T17:48:12Z <INFO:emu.grasscutter.server.game.GameSession> SEND: PlayerSetPauseRsp (1771)
+    2024-04-20T17:48:12Z <INFO:emu.grasscutter.server.game.GameSession> RECV: PlayerSetPauseReq (4448)
+    2024-04-20T17:48:12Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneTimeNotify (21694)
+    2024-04-20T17:48:12Z <INFO:emu.grasscutter.server.game.GameSession> SEND: PlayerSetPauseRsp (1771)
+    2024-04-20T17:48:13Z <INFO:emu.grasscutter.server.game.GameSession> RECV: PlayerSetPauseReq (4448)
+    2024-04-20T17:48:13Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneTimeNotify (21694)
+    2024-04-20T17:48:13Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneTimeNotify (21694)
+    2024-04-20T17:48:13Z <INFO:emu.grasscutter.server.game.GameSession> SEND: PlayerSetPauseRsp (1771)
+    2024-04-20T17:48:13Z <INFO:emu.grasscutter.server.game.GameSession> RECV: PlayerSetPauseReq (4448)
+    2024-04-20T17:48:13Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneTimeNotify (21694)
+    2024-04-20T17:48:13Z <INFO:emu.grasscutter.server.game.GameSession> SEND: PlayerSetPauseRsp (1771)
+    2024-04-20T17:48:16Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneTimeNotify (21694)
+    2024-04-20T17:48:18Z <INFO:emu.grasscutter.server.game.GameSession> RECV: SkipPlayerGameTimeReq (22076)
+    2024-04-20T17:48:18Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SkipPlayerGameTimeRsp (24529)
+    2024-04-20T17:48:26Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneTimeNotify (21694)
+    2024-04-20T17:48:26Z <INFO:emu.grasscutter.server.game.GameSession> RECV: SetEntityClientDataNotify (1139)
+    2024-04-20T17:48:26Z <INFO:emu.grasscutter.server.game.GameSession> RECV: SetEntityClientDataNotify (1139)
+    2024-04-20T17:48:26Z <INFO:emu.grasscutter.server.game.GameSession> RECV: SetEntityClientDataNotify (1139)
+    2024-04-20T17:48:26Z <INFO:emu.grasscutter.server.game.GameSession> RECV: SetEntityClientDataNotify (1139)
+    2024-04-20T17:48:26Z <INFO:emu.grasscutter.server.game.GameSession> RECV: SetEntityClientDataNotify (1139)
+    2024-04-20T17:48:26Z <INFO:emu.grasscutter.server.game.GameSession> RECV: SetEntityClientDataNotify (1139)
+    2024-04-20T17:48:26Z <INFO:emu.grasscutter.server.game.GameSession> RECV: SetEntityClientDataNotify (1139)
+    2024-04-20T17:48:26Z <INFO:emu.grasscutter.server.game.GameSession> RECV: SetEntityClientDataNotify (1139)
+    2024-04-20T17:48:26Z <INFO:emu.grasscutter.server.game.GameSession> RECV: PlayerSetPauseReq (4448)
+    2024-04-20T17:48:26Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneTimeNotify (21694)
+    2024-04-20T17:48:26Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneTimeNotify (21694)
+    2024-04-20T17:48:26Z <INFO:emu.grasscutter.server.game.GameSession> SEND: PlayerSetPauseRsp (1771)
+    2024-04-20T17:48:26Z <INFO:emu.grasscutter.server.game.GameSession> RECV: PlayerSetPauseReq (4448)
+    2024-04-20T17:48:26Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneTimeNotify (21694)
+    2024-04-20T17:48:26Z <INFO:emu.grasscutter.server.game.GameSession> SEND: PlayerSetPauseRsp (1771)
+    2024-04-20T17:48:27Z <INFO:emu.grasscutter.server.game.GameSession> RECV: PlayerSetPauseReq (4448)
+    2024-04-20T17:48:27Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneTimeNotify (21694)
+    2024-04-20T17:48:27Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneTimeNotify (21694)
+    2024-04-20T17:48:27Z <INFO:emu.grasscutter.server.game.GameSession> SEND: PlayerSetPauseRsp (1771)
+    2024-04-20T17:48:27Z <INFO:emu.grasscutter.server.game.GameSession> RECV: PlayerSetPauseReq (4448)
+    2024-04-20T17:48:27Z <INFO:emu.grasscutter.server.game.GameSession> SEND: SceneTimeNotify (21694)
+    2024-04-20T17:48:27Z <INFO:emu.grasscutter.server.game.GameSession> SEND: PlayerSetPauseRsp (1771)
+
+SkipPlayerGameTimeReq
+SkipPlayerGameTimeRsp
+proto{
+    4.0{
+        syntax = "proto3";
+        option java_package = "emu.grasscutter.net.proto";
+        // CmdId: 22076
+        // Obf: DEFBFNOLMID
+        message SkipPlayerGameTimeReq {
+            uint32 game_time = 12;
+            bool is_force_set = 1;
+            uint32 client_game_time = 7;
+        }
+        syntax = "proto3";
+        option java_package = "emu.grasscutter.net.proto";
+        // CmdId: 24529
+        // Obf: PFBBCGKLBFC
+        message SkipPlayerGameTimeRsp {
+            uint32 client_game_time = 2;
+            int32 retcode = 9;
+            uint32 game_time = 13;
+        }
+    }
+    4.5{
+        // CmdId: 6910 CLDIDLGCDMM
+        message SkipPlayerGameTimeReq {
+            bool HAHPHHPEFGI = 1;
+            uint32 EMDKGEILOCM = 9;
+            uint32 HHNLBMDEDJN = 2;
+        }
+
+        // CmdId: 25744 BHCJIPOGIAK
+        message SkipPlayerGameTimeRsp {
+            int32 PLCEBDLFFED = 5;
+            uint32 EMDKGEILOCM = 12;
+            uint32 HHNLBMDEDJN = 4;
+        }
+
+
+    }
+
+}
+// CmdId: 9712 不对
+message MCGHGIGHENA {
+	uint32 ECBBIEKLCBH = 1;
+	uint32 KIJBAENDKLG = 5;
+	bool PNACACKJCHB = 2;
+}
+// CmdId: 28509 不对
+message BLMEOAOEFHJ {
+	bool PNACACKJCHB = 7;
+	uint32 JFOPENIEDIE = 13;
+	uint32 CCMOKDMIHEH = 6;
+}
+// CmdId: 26389 不对
+message FGNEHIOKFEP {
+	bool PNACACKJCHB = 1;
+	uint32 KIJBAENDKLG = 7;
+	uint32 EPHJOLBPEON = 13;
+}
+// CmdId: 7443 不对
+message JIKBICCEIGC {
+	uint32 CNKHEPPIAKK = 8;
+	bool CFDLDEKLLEL = 10;
+	uint32 OFJKNMAFFBF = 11;
+}
+// CmdId: 26184
+message OJEOPMNNKAG {
+	uint32 GMCGEAIAEIN = 12;
+	bool LOMPKOPKFMJ = 3;
+	uint64 BIGGHONJNPO = 10;
+}
+// CmdId: 6632 不对
+message HOPHMMFCNFL {
+	uint32 BDKBJCHCCDN = 8;
+	bool DFPMAIJGKFN = 15;
+	uint32 EBJNEJNKFBG = 1;
+}
+
+// Message 1884
+message BHCJIPOGIAK {
+	int32 PLCEBDLFFED = 5;
+	uint32 EMDKGEILOCM = 12;
+	uint32 HHNLBMDEDJN = 4;
+}
+// Message 805
+message CLDIDLGCDMM {
+	bool HAHPHHPEFGI = 1;
+	uint32 EMDKGEILOCM = 9;
+	uint32 HHNLBMDEDJN = 2;
+}
+
+
+//调整时间 SkipPlayerGameTimeReq SkipPlayerGameTimeRsp
+// CmdId: 25149
+message DJIGCMDPLAG {
+	/* protected @ 0x20 */// uint32 EMDKGEILOCM = 0;
+	/* protected @ 0x24 */// uint32 MFJGFEEPIJC = 0;
+	/* protected @ 0x28 */// bool HAHPHHPEFGI = 0;
+}
+// CmdId: 27085
+message OJPBBHGOJBN {
+	/* protected @ 0x20 */// int32 PLCEBDLFFED = 0;
+	/* protected @ 0x24 */// uint32 MFJGFEEPIJC = 0;
+	/* protected @ 0x28 */// uint32 FNKDLMCGOBP = 0;
+}

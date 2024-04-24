@@ -1,0 +1,43 @@
+//AnnounceData 4.5
+//message GPHJBAFLKOG {
+//	string IDNPONMMOFM = 5;
+//	string HCKJNAGLKMF = 3;
+//	string PENIJOMJOMI = 15;
+//	uint32 LFBFFAGOEDG = 12;// 33
+//	uint32 MJOJMMFAFHC = 9;
+//	uint32 IHNPEIOCOCF = 13;// 39
+//	uint32 CJIFPEJOHOP = 2;// 24
+//	bool BCHKJCLIKPI = 6;
+//	uint32 GAGGCPNBNHI = 1;
+//}
+
+//4.0
+//syntax = "proto3";
+//option java_package = "emu.grasscutter.net.proto";
+// Obf: GPHJBAFLKOG
+//message AnnounceData {
+//	string count_down_text = 3;
+//	bool is_center_system_last_5_every_minutes = 7;
+//	uint32 count_down_frequency = 2;
+//	uint32 center_system_frequency = 14;
+//	uint32 end_time = 5;    //25
+//	string dungeon_confirm_text = 11;
+//	uint32 config_id = 12;  //31
+//	string center_system_text = 1;
+//	uint32 begin_time = 10; //24
+//}
+
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+// Obf: GPHJBAFLKOG
+message AnnounceData {
+	string count_down_text = 3;
+    string dungeon_confirm_text = 5;
+    string center_system_text = 15;//需要用到这个
+	uint32 count_down_frequency = 9;
+	uint32 center_system_frequency = 1; //需要用到这个
+	uint32 end_time = 12;    //25 ok //需要用到这个
+	uint32 config_id = 13;  //31 ok //需要用到这个
+	bool is_center_system_last_5_every_minutes = 6;//ok
+	uint32 begin_time = 2;     //24 ok //需要用到这个
+}
