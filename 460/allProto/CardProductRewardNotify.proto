@@ -1,0 +1,8 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+message CardProductRewardNotify {
+  string product_id = 4;
+  uint32 remain_days = 14;
+  uint32 hcoin = 10;
+}

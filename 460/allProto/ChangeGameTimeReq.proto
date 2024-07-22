@@ -1,0 +1,8 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+message ChangeGameTimeReq {
+	bool is_force_set = 1;
+	uint32 extra_days = 2;
+	uint32 game_time = 9;
+}

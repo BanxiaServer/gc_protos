@@ -1,0 +1,8 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+message AiSyncInfo {
+  uint32 entity_id = 9;
+  bool has_path_to_target = 10;
+  bool is_self_killing = 11;
+}

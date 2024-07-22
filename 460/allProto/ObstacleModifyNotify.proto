@@ -1,0 +1,11 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+import "ObstacleInfo.proto";
+
+message ObstacleModifyNotify {
+  repeated int32 HPDLPMEOMKB = 10;
+  repeated int32 EGMEMAIOALB = 15;
+  repeated int32 remove_obstacle_ids = 6;
+  repeated ObstacleInfo add_obstacles = 5;
+  uint32 scene_id = 7;
+}

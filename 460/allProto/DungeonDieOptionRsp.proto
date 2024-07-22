@@ -1,0 +1,9 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+import "PlayerDieOption.proto";
+
+message DungeonDieOptionRsp {
+  PlayerDieOption die_option = 2;
+  int32 retcode = 11;
+  uint32 revive_count = 14;
+}

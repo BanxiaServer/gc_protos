@@ -1,0 +1,9 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+message EvtAvatarStandUpNotify {
+	int32 direction = 12;
+	uint64 chair_id = 5;
+	int32 performId = 9;
+	uint32 entity_id = 15;
+}

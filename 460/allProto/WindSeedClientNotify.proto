@@ -1,0 +1,28 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+import "Vector.proto";
+
+message WindSeedClientNotify {
+  message RefreshNotify {
+    uint32 refresh_num = 4;
+  }
+
+  message AddWindBulletNotify {
+    Vector seed_pos = 5;
+    uint32 HCHIGHEKMPI = 12;
+    uint32 FJOPGEEAHNB = 1;
+  }
+
+  message AreaNotify {
+    bytes area_code = 7;
+    uint32 area_type = 4;
+    uint32 area_id = 5;
+  }
+
+  oneof notify {
+		RefreshNotify refresh_notify = 4;
+		AddWindBulletNotify add_wind_bullet_notify = 13;
+		AreaNotify area_notify = 14;
+	}
+}

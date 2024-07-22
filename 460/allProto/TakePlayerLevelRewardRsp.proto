@@ -1,0 +1,8 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+message TakePlayerLevelRewardRsp {
+  uint32 level = 5;
+  uint32 reward_id = 2;
+  int32 retcode = 3;
+}
