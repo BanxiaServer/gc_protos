@@ -2107,3 +2107,4 @@ HFANJCHEDHC⇨AvatarUpgradeReq
 以下是自己解的
 FOIMOJBALLO⇨msg_type
 PGLLIHAHNEC⇨msg
+LPLOBCLLOMD⇨ui_interact_id
