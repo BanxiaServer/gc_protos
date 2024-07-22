@@ -2104,6 +2104,6 @@ AHIOFEJFIMP⇨old_append_prop_list
 DDKBDEJDHEJ⇨GetAllUnlockNameCardReq
 HFANJCHEDHC⇨AvatarUpgradeReq
 
-以下是我自己解的
+以下是自己解的
 FOIMOJBALLO⇨msg_type
 PGLLIHAHNEC⇨msg
