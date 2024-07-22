@@ -22103,7 +22103,7 @@ message OGPLHLLFLEE {
 }
 
 // CmdId: 8063
-message LGMHBKKGHCB
+message LGMHBKKGHCB {}
 
 // CmdId: 9141
 message ONDIJMIENLE {
@@ -26235,7 +26235,7 @@ message CJBJAPKOBFO {
 	uint32 cur_progress = 12;
 }
 
-// CmdId: 2448
+// CmdId: 2448 //AntiAddictNotify
 message ONJGFGPAOLE {
 	string level = 3;
 	int32 FOIMOJBALLO = 8;
@@ -26570,7 +26570,7 @@ message KGEAFFFLBIN {
 }
 
 // CmdId: 24875
-message ALCKJOFAKEL
+message ALCKJOFAKEL{}
 
 // CmdId: 22674
 message IALKBPMPJDF {
@@ -27389,7 +27389,7 @@ message SceneGalleryHomeBalloonInfo {
 }
 
 // CmdId: 294
-message OBGNLCCHLIK
+message OBGNLCCHLIK{}
 
 // CmdId: 20706
 message GetBlossomBriefInfoListReq {
@@ -28013,7 +28013,7 @@ message NJGICNBHEPM {
 }
 
 // CmdId: 26439
-message EEGDAABFFEF
+message EEGDAABFFEF{}
 
 message CFJIJBEEHPJ {
 	uint32 uid = 6;

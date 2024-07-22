@@ -1,0 +1,8 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+// Obf: ONJGFGPAOLE
+message AntiAddictNotify {
+	string level = 3;
+	int32 FOIMOJBALLO = 8;
+	string PGLLIHAHNEC = 10;
+}
