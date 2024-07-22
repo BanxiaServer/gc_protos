@@ -26238,8 +26238,8 @@ message CJBJAPKOBFO {
 // CmdId: 2448 //AntiAddictNotify
 message ONJGFGPAOLE {
 	string level = 3;
-	int32 FOIMOJBALLO = 8;
-	string PGLLIHAHNEC = 10;
+	int32 msg_type = 8;
+	string msg = 10;
 }
 
 message GCGMsgNoDamageSkillResult {
