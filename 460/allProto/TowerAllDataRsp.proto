@@ -1,42 +1,29 @@
-// https://github.com/SlushinPS/beach-simulator
-// Copyright (C) 2023 Slushy Team
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU Affero General Public License as
-// published by the Free Software Foundation, either version 3 of the
-// License, or (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU Affero General Public License for more details.
-//
-// You should have received a copy of the GNU Affero General Public License
-// along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
 syntax = "proto3";
+
 option java_package = "emu.grasscutter.net.proto";
-import "TowerFloorRecord.proto";
+
 import "TowerCurLevelRecord.proto";
+import "TowerFloorRecord.proto";
 import "TowerMonthlyBrief.proto";
-// CmdId: 3897
-// Obf: BDPBFJJNCKK
+
+// 4.6.0
+// CmdId: 7133
 message TowerAllDataRsp {
-	bool is_finished_entrance_floor = 12;
-	uint32 schedule_start_time = 1168;
-	uint32 FEOKMKFLOFI = 6;
-	uint32 CFHPLJKKOFG = 15;
-	uint32 NFLJLHDCPFJ = 5;
-	repeated TowerFloorRecord tower_floor_record_list = 14;
-	uint32 JJJCPHMBMLG = 9;
+	uint32 tower_schedule_id = 1;
+	bool is_finished_entrance_floor = 2;
+	uint32 valid_floor_record_list = 3;
+	TowerCurLevelRecord cur_level_record = 4;
+	int32 retcode = 5;
+	map<uint32, uint32> skip_floor_granted_reward_item_map = 6;
 	bool is_first_interact = 7;
-	TowerCurLevelRecord cur_level_record = 10;
-	TowerMonthlyBrief last_schedule_monthly_brief = 4;
-	map<uint32, uint32> floor_open_time_map = 13;
-	TowerMonthlyBrief monthly_brief = 120;
-	uint32 next_schedule_change_time = 11;
-	uint32 tower_schedule_id = 3;
-	map<uint32, uint32> skip_floor_granted_reward_item_map = 8;
-	int32 retcode = 2;
-	uint32 MOOJNLEAKFC = 1;
+	uint32 NNIGLOKAEAI = 8;
+	map<uint32, uint32> floor_open_time_map = 9;
+	uint32 ANOHIMHLMID = 10;
+	uint32 MICBOPDAEFN = 11;
+	uint32 next_schedule_change_time = 12;
+	TowerMonthlyBrief monthly_brief = 13;
+	repeated TowerFloorRecord tower_floor_record_list = 14;
+	uint32 LKDMPGCGDCJ = 15;
+	uint32 schedule_start_time = 942;
+	TowerMonthlyBrief last_schedule_monthly_brief = 1740;
 }

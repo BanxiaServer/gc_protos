@@ -1,8 +1,11 @@
 syntax = "proto3";
+
 option java_package = "emu.grasscutter.net.proto";
 
+// Version: 4.6.0
+// Obfs: LHJAINDLHBM
 message QuestVarOp {
-  bool is_add = 4;
-  uint32 index = 9;
-  int32 value = 5;
+	uint32 index = 2;
+	bool is_add = 8;
+	int32 value = 15;
 }
