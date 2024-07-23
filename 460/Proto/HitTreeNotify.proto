@@ -1,0 +1,11 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+import "Vector.proto";
+//4.6.0
+// CmdId: 3983
+// Obf: MKMLOPMNMBP
+message HitTreeNotify {
+	Vector tree_pos = 10;
+	Vector drop_pos = 12;
+	uint32 tree_type = 4;
+}

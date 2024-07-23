@@ -2104,7 +2104,12 @@ AHIOFEJFIMP⇨old_append_prop_list
 DDKBDEJDHEJ⇨GetAllUnlockNameCardReq
 HFANJCHEDHC⇨AvatarUpgradeReq
 
-以下是自己解的
+// 以下是自己解的
 FOIMOJBALLO⇨msg_type
 PGLLIHAHNEC⇨msg
 LPLOBCLLOMD⇨ui_interact_id
+MKMLOPMNMBP⇨HitTreeNotify
+CLECPJBHFEO⇨tree_type
+// 下面两个不一定 可能得互换
+DCOKIBGAFKB⇨tree_pos
+LKDOKAAKHNA⇨drop_pos
