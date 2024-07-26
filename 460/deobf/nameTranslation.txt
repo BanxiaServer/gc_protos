@@ -2104,12 +2104,34 @@ AHIOFEJFIMP⇨old_append_prop_list
 DDKBDEJDHEJ⇨GetAllUnlockNameCardReq
 HFANJCHEDHC⇨AvatarUpgradeReq
 
+
+
+
+
 // 以下是自己解的
-FOIMOJBALLO⇨msg_type
-PGLLIHAHNEC⇨msg
-LPLOBCLLOMD⇨ui_interact_id
-MKMLOPMNMBP⇨HitTreeNotify
-CLECPJBHFEO⇨tree_type
+FOIMOJBALLO = msg_type
+PGLLIHAHNEC = msg
+LPLOBCLLOMD = ui_interact_id
+MKMLOPMNMBP = HitTreeNotify
+CLECPJBHFEO = tree_type
+
 // 下面两个不一定 可能得互换
-DCOKIBGAFKB⇨tree_pos
-LKDOKAAKHNA⇨drop_pos
+DCOKIBGAFKB = tree_pos
+LKDOKAAKHNA = drop_pos
+
+PGONPFNHNJP = GetWorldMpInfoReq
+BPIMJDBDKDO = GetOnlinePlayerListReq
+
+// 下面两个不一定 可能得互换
+HLBOLHIOCKC = src_app_id
+FBEEALBIIPP = src_thread_index
+
+FOONOLPIDLM = PlayerApplyEnterMpResultNotify
+KHNOEMGMHMJ = target_nickname
+MGHCLEKKOKG=PlayerApplyEnterMpReq
+PJIIPCEHFLP=target_uid
+LKEBFJDDHPO=PlayerApplyEnterMpResultReq
+MDFMHEEEPLN=apply_uid
+HLDCMMNPJOL=PlayerApplyEnterMpResultRsp
+NPHLOIPCKJD=del_entity_id_list
+PLIAHMOKHOI=ServerDisconnectClientNotify

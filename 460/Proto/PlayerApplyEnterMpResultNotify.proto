@@ -1,0 +1,24 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// CmdId: 9791
+// Obf: FOONOLPIDLM
+// 4.6.0
+message PlayerApplyEnterMpResultNotify {
+	enum Reason {
+		Reason_PLAYER_JUDGE = 0;
+		Reason_PLAYER_ENTER_OPTION_REFUSE = 1;
+		Reason_PLAYER_ENTER_OPTION_DIRECT = 2;
+		Reason_SYSTEM_JUDGE = 3;
+		Reason_HOST_IN_MATCH = 4;
+		Reason_PS_PLAYER_NOT_ACCEPT_OTHERS = 5;
+		Reason_OPEN_STATE_NOT_OPEN = 6;
+		Reason_HOST_IN_EDIT_MODE = 7;
+		Reason_PRIOR_CHECK = 8;
+	}
+
+	bool is_agreed = 1;
+	uint32 target_uid = 4;
+	Reason reason = 5;
+	string target_nickname = 8;
+}

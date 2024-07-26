@@ -1,0 +1,10 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+
+// CmdId: 6551
+// OBF:MGHCLEKKOKG
+//4.6.0
+message PlayerApplyEnterMpReq {
+	uint32 target_uid = 1;
+}

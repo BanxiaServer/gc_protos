@@ -1,0 +1,12 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// CmdId: 26899
+// 4.6.0
+// obf" HLDCMMNPJOL
+message PlayerApplyEnterMpResultRsp {
+	uint32 param = 1;
+	bool is_agreed = 5;
+	int32 retcode = 9;
+	uint32 apply_uid = 11;
+}

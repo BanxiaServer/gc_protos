@@ -1,0 +1,9 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// CmdId: 28929
+// 4.6.0
+// obf: PLIAHMOKHOI
+message ServerDisconnectClientNotify {
+	uint32 data = 15;
+}

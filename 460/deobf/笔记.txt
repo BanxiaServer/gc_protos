@@ -1,0 +1,240 @@
+SceneKickPlayerReq
+PlayerApplyEnterMpReq
+
+cmdid 9326
+5850
+9826
+
+
+6551 确定
+
+400点击申请加入时
+03:09:37 <INFO:GameSession> RECV: PlayerApplyEnterMpReq (9629)
+> 20e752
+03:09:37 <INFO:GameSession> SEND: PlayerApplyEnterMpNotify (5296)
+> 721708e85212013118012802300148d1e80c62050887ade204
+03:09:37 <INFO:GameSession> SEND: PlayerApplyEnterMpRsp (20994)
+> 58e752
+03:09:40 <INFO:GameSession> SEND: SceneTimeNotify (21694)
+第二次
+03:10:30 <INFO:GameSession> SEND: SceneTimeNotify (21694)
+> 08d3c90228014803
+03:10:30 <INFO:GameSession> RECV: PlayerApplyEnterMpReq (9629)
+> 20e852
+03:10:30 <INFO:GameSession> SEND: PlayerApplyEnterMpNotify (5296)
+> 722508e752120fe8a2abe88194e69cbae69cbae599a8180b2802300148d1e80c62050887ade204
+03:10:30 <INFO:GameSession> SEND: PlayerApplyEnterMpRsp (20994)
+> 58e852
+
+
+后续点击确认
+03:14:10 <INFO:GameSession> SEND: SceneTimeNotify (21694)
+> 08d3c90228014803
+03:14:10 <INFO:GameSession> RECV: PlayerApplyEnterMpResultReq (24849)
+> 58e8526001
+03:14:10 <INFO:GameSession> SEND: PlayerApplyEnterMpResultNotify (3467)
+> 100118e752720fe8a2abe88194e69cbae69cbae599a8
+03:14:10 <INFO:GameSession> SEND: DelTeamEntityNotify (4320)
+> 3a04828080487803
+03:14:10 <INFO:GameSession> SEND: PlayerEnterSceneNotify (2783)
+> 08e75228a7e38f888e32300138928a0648035003620f0d7eb12b45150ba242431d29d0d6c4720f0d7eb12b45150ba242431d29d0d6c4f0293aba5218332d31303539392d313732313736323035302d3138343032f85201
+03:14:10 <INFO:GameSession> SEND: DelTeamEntityNotify (4320)
+> 3a04828080487803
+03:14:10 <INFO:GameSession> SEND: PlayerChatNotify (9541)
+> 120e20e85268828280b506ca34027801
+03:14:10 <INFO:GameSession> SEND: PlayerChatNotify (9541)
+> 120e20e85268828280b506ca34027801
+03:14:10 <INFO:GameSession> SEND: SceneTeamUpdateNotify (4509)
+
+
+// CmdId: 22627
+message DIGPMBNOGGI {
+	repeated uint32 POGPCFDPCNC = 1;
+	uint32 scene_id = 6;
+}
+
+// CmdId: 24742
+message OJNOIIJPCKH {
+	uint32 scene_id = 8;
+	repeated uint32 POGPCFDPCNC = 10;
+}
+
+
+
+// CmdId: 25915
+message NCBIAGOBABL {
+	repeated uint32 NPHLOIPCKJD = 1;
+	uint32 scene_id = 7;
+}
+
+
+
+new
+04:24:18 <INFO:GameSession> RECV: PlayerApplyEnterMpResultReq (25379)
+> 58a54e6001
+04:24:18 <INFO:GameSession> SEND: PlayerApplyEnterMpResultNotify (9791)
+> 080120a64e420854726176656c6572
+04:24:19 <INFO:GameSession> SEND: DelTeamEntityNotify (3994320)
+> 3a04828080487803
+04:24:19 <INFO:GameSession> SEND: PlayerEnterSceneNotify (21317)
+> 1001308cda908a8e3238036a0f0d0ead2b4515cc9b42431d31ecd6c470a64e78868202c20718332d31303032322d313732313736363235392d3138343032
+04:24:19 <INFO:GameSession> SEND: DelTeamEntityNotify (3994320)
+> 3a04828080487803
+04:24:20 <INFO:GameSession> SEND: WorldPlayerLocationNotify (3997085)
+21f08034a1b20a64e2a0f0d0ead2b4515cc9b42431d31ecd6c432051520319c43
+[K04:24:20 <INFO:GameSession> SEND: PlayerChatNotify (9695)
+a0e08f4a280b50618a54eba11025801
+[K04:24:20 <INFO:GameSession> SEND: ScenePlayerLocationNotify (801)
+003621b20a64e2a0f0d0ead2b4515cc9b42431d31ecd6c432051520319c43
+[K04:24:20 <INFO:GameSession> SEND: PlayerChatNotify (9695)
+> 4a0e08f4a280b50618a54eba11025801
+04:24:20 <INFO:GameSession> SEND: WorldPlayerLocationNotify (3997085)
+> 721f08034a1b20a64e2a0f0d0ead2b4515cc9b42431d31ecd6c432051520319c43721f08034a1b20a54e2a0f0d0ead2b4515cc9b42431d31ecd6c432051520319c43
+04:24:20 <INFO:GameSession> SEND: ScenePlayerLocationNotify (801)
+> 4003621b20a64e2a0f0d0ead2b4515cc9b42431d31ecd6c432051520319c43621b20a54e2a0f0d0ead2b4515cc9b42431d31ecd6c432051520319c43
+04:24:20 <INFO:GameSession> SEND: SceneTeamUpdateNotify (28422)
+> ...
+04:24:21 <INFO:GameSession> SEND: SceneTeamUpdateNotify (28422)
+> 2a8714080310a64e1ab2030a0c080115b3eac8ff1dd91038460a0c0802158e3e0e541dd91038460a0c080315261ce9571dd91038460a0c08041508666ae41dd91038460a0c080515b7b673891dd91038460a0c080615f9231cb91dd91038460a0c0807150deecce01dd91038460a0c0808155796ff051dd91038460a0c08091562ea3e5d1dd
+
+出现问题的地方
+05:44:05 <INFO:GameSession> RECV: PlayerApplyEnterMpResultReq (25379)
+> 58a54e6001
+05:44:05 <INFO:GameSession> SEND: PlayerApplyEnterMpResultNotify (9791)
+> 080120a64e420854726176656c6572
+05:44:06 <INFO:GameSession> SEND: SceneTimeNotify (25965)
+> 3886be027003
+05:44:06 <INFO:GameSession> SEND: WorldPlayerLocationNotify (3997085)
+> 721f08034a1b20a54e2a0f0dae0d304515b7db84431d8110cac432051584d6b343
+05:44:06 <INFO:GameSession> SEND: ScenePlayerLocationNotify (801)
+4003621b20a54e2a0f0dae0d304515b7db84431d8110cac432051584d6b343
+05:44:06 <INFO:GameSession> SEND: DelTeamEntityNotify (3994320)
+3a04828080487803
+05:44:06 <INFO:GameSession> SEND: WorldPlayerLocationNotify (3997085)
+> 721f08034a1b20a64e2a0f0db1ab304515107583431d63ffccc4320515f2e79c43
+05:44:06 <INFO:GameSession> SEND: ScenePlayerLocationNotify (801)
+> 4003621b20a64e2a0f0db1ab304515107583431d63ffccc4320515f2e79c43
+05:44:06 <INFO:GameSession> SEND: PlayerEnterSceneNotify (21317)
+> 100130aae9b48c8e3238036a0f0db1ab304515107583431d63ffccc470a64e78ceff03c20718332d31303032322d313732313737313034362d3138343032
+05:44:06 <INFO:GameSession> SEND: DelTeamEntityNotify (3994320)
+> 3a04828080487803
+
+
+// CmdId: 24880
+message EDEAIGAPJHO {
+	uint32 target_uid = 6;
+	int32 retcode = 14;
+}
+
+
+// CmdId: 2069
+message IDMMHAMLPKG {
+	uint32 target_uid = 1;
+}
+
+
+// CmdId: 1958
+message HKLEMGKPMAB {
+	uint32 target_uid = 1;
+	int32 retcode = 5;
+}
+
+// CmdId: 25779
+message JBDAHCPJIFD {
+	uint32 target_uid = 3;
+	int32 retcode = 7;
+}
+
+// CmdId: 693
+message MCPFMALIPFE {
+	uint32 target_uid = 15;
+}
+
+// CmdId: 6469
+message OHKFDPMFNML {
+	uint32 target_uid = 2;
+}
+
+// CmdId: 7764
+message KJGKGGJLNCM {
+	uint32 target_uid = 9;
+}
+
+
+// CmdId: 3491
+message GJLDLNBJAAK {
+	uint32 target_uid = 3;
+}
+
+// CmdId: 8303
+message DIJBEGOJKNG {
+	uint32 target_uid = 10;
+}
+
+// CmdId: 9326
+message GNMFLFCEEFI {
+	uint32 target_uid = 12;
+}
+
+// CmdId: 26244
+message DLHDAEEHDGG {
+	uint32 target_uid = 7;
+}
+
+
+// CmdId: 27343
+message IHNDMBNEGKE {
+	uint32 target_uid = 10;
+}
+
+// CmdId: 1915
+message JFAHKOIOBIH {
+	uint32 target_uid = 10;
+}
+
+// CmdId: 7888
+message KIDNLLCPGDJ {
+	int32 retcode = 5;
+	uint32 target_uid = 13;
+}
+
+
+// CmdId: 20646
+message MBCGMLKKANA {
+	uint32 target_uid = 5;
+	int32 retcode = 14;
+}
+
+// CmdId: 27745
+message OEMJNFNOOMP {
+	uint32 target_uid = 2;
+}
+
+
+// CmdId: 8659
+message OJJCMGNBDOP {
+	uint32 target_uid = 2;
+	int32 retcode = 3;
+}
+
+// CmdId: 8872
+message HMONIFGHACG {
+	int32 retcode = 2;
+	uint32 target_uid = 9;
+}
+
+// CmdId: 6551
+message MGHCLEKKOKG {
+	uint32 target_uid = 1;
+}
+
+
+// CmdId: 8867
+message LFFJJILMEIJ {
+	uint32 target_uid = 4;
+}
+
+// CmdId: 26556
+message CCEBAEOIHPM {
+	uint32 target_uid = 7;
+}
