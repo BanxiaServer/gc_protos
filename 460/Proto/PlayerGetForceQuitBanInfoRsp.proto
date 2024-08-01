@@ -1,0 +1,11 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// CmdId: 29909
+// obf: FEGKBAAMGCM
+// 4.6.0
+message PlayerGetForceQuitBanInfoRsp {
+	uint32 match_id = 4;
+	int32 retcode = 7;
+	uint32 expire_time = 9;
+}

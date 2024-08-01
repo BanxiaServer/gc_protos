@@ -2135,3 +2135,6 @@ MDFMHEEEPLN=apply_uid
 HLDCMMNPJOL=PlayerApplyEnterMpResultRsp
 NPHLOIPCKJD=del_entity_id_list
 PLIAHMOKHOI=ServerDisconnectClientNotify
+LFNLANFJHOE=PlayerGetForceQuitBanInfoReq
+FEGKBAAMGCM=PlayerGetForceQuitBanInfoRsp
+EADHOCKFDOC=match_id
