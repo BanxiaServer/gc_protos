@@ -8717,7 +8717,7 @@ message UgcTrigger {
 }
 
 // CmdId: 9326
-message GNMFLFCEEFI {
+message SceneKickPlayerReq {
 	uint32 target_uid = 12;
 }
 
