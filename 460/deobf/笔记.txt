@@ -1,1 +1,12 @@
 cmdid 3941 联机状态加好友
+
+// CmdId: 28106
+message EFEDNNPIENJ {
+	FriendBrief target_friend_brief = 6;
+	uint32 target_uid = 13;
+}
+// CmdId: 4226
+message JDEJMBHOIIB {
+	FriendBrief target_friend_brief = 1;
+	uint32 target_uid = 4;
+}

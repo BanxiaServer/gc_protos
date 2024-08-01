@@ -2139,3 +2139,5 @@ LFNLANFJHOE=PlayerGetForceQuitBanInfoReq
 FEGKBAAMGCM=PlayerGetForceQuitBanInfoRsp
 EADHOCKFDOC=match_id
 GNMFLFCEEFI=SceneKickPlayerReq
+GJLDLNBJAAK=AskAddFriendReq
+IBONLCANFDK=AskAddFriendRsp

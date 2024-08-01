@@ -1,0 +1,11 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// CmdId: 4238
+// obf: IBONLCANFDK
+// 4.6.0
+message AskAddFriendRsp {
+	uint32 target_uid = 2;
+	uint32 param = 6;
+	int32 retcode = 15;
+}

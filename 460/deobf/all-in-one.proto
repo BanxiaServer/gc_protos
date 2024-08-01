@@ -4753,7 +4753,7 @@ message Furniture {
 }
 
 // CmdId: 3491
-message GJLDLNBJAAK {
+message AskAddFriendReq {
 	uint32 target_uid = 3;
 }
 
@@ -7851,7 +7851,7 @@ message OFFELEIFCBP {
 }
 
 // CmdId: 4238
-message IBONLCANFDK {
+message AskAddFriendRsp {
 	uint32 target_uid = 2;
 	uint32 param = 6;
 	int32 retcode = 15;
